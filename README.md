@@ -1,44 +1,78 @@
-CS340 Grazioso Salvare Animal Rescue ReadMe
+# CS-340 Grazioso Salvare Animal Rescue Dashboard
 
-Brad Mills
+**Author:** Brad Mills  
+**Date:** March 26, 2025
 
-Project Description
+## Project Overview
 
-This dashboard project, developed for Grazioso Salvare, allows users to filter, view, and interact with the Austin Animal Center Outcomes dataset. The dashboard includes several interactive features, such as filtering options for different rescue types, a dynamic data table, and visualizations that display the location and breed distribution of animals suited for various rescue operations.
+This dashboard, developed for Grazioso Salvare, is an interactive tool designed to explore and analyze the Austin Animal Center Outcomes dataset. It empowers users to filter animal data by rescue type, visualize breed distributions, and locate animals geographically. Built with maintainability and usability in mind, the dashboard serves both end-users and developers effectively.
 
-The dashboard was designed with maintainability and ease of use in mind, making it accessible for both users and future developers.
-Required Functionality
-The project includes the following key functionalities:
-- Interactive Filter Options: Users can filter the data based on specific rescue types:
+---
+
+## Features
+
+### Interactive Filters
+- **Rescue Types:**
   - Water Rescue
   - Mountain or Wilderness Rescue
   - Disaster Rescue or Individual Tracking
-  - Reset (returns all widgets to their unfiltered state)
-- Dynamic Data Table: Displays animal data based on filter options with pagination, sorting, and filtering features for easy navigation.
-- Geolocation Map: Displays the location of a selected animal, centering the map on that animal's position and providing additional information.
-- Breed Distribution Chart: A pie chart that dynamically displays the breed distribution of animals in the filtered data.
-Screenshots / Screencast
+  - Reset (restores unfiltered state)
+- **Purpose:** Allows users to narrow down animal data based on specific rescue roles.
 
-Video link to screencast below:
-https://1drv.ms/v/s!AjoOhhMeaijyg84ttsY6H1_iNBz9zg?e=6QSw4n
-Tools and Rationale
-The following tools and technologies were used to achieve the required functionality:
+### Dynamic Data Table
+- Displays filtered animal records.
+- Features pagination, sorting, and filtering for seamless navigation.
+- Supports single-row selection to trigger map updates.
 
-- Python: Chosen for its rich ecosystem of data processing, web development, and database libraries, which allowed for efficient dashboard creation.
-- MongoDB: Used as the database model for storing and retrieving animal data. MongoDB was selected due to its:
-  - Document-based structure: Allows for flexible data storage, which is suitable for varying animal data attributes.
-  - Ease of integration with Python (via PyMongo): Facilitates efficient data retrieval directly from Python applications.
-  - Scalability: Supports large datasets, making it ideal for future expansion.
-- Dash Framework: Provides the view (front-end) and controller (back-end) components for the web application.
-  - Dash Core Components: Interactive components like radio buttons, dropdowns, and data tables.
-  - Dash Leaflet: Enables map integration for geolocation data visualization.
-  - Dash Table and Plotly Express: Used for creating a dynamic table and charts that respond to filtering inputs.
-Why MongoDB?
-MongoDB was selected as the data model for its capabilities to store and retrieve semi-structured data. Its document-oriented design and JSON-like data storage format allow us to efficiently interface with animal records, and its ease of integration with Python libraries (such as PyMongo) provides streamlined interaction with the dashboard components. Additionally, MongoDB’s scalability supports the storage and quick retrieval of potentially large animal datasets, a necessary feature for Grazioso Salvare’s requirements.
-Why Dash?
-The Dash framework enables rapid development of interactive web applications without the need for JavaScript. Its component-based design integrates well with Python and provides extensive support for data visualization and interactivity, which are essential for creating dynamic elements such as filter options, charts, and maps.
-Installation and Reproduction Steps
-To reproduce this project:
+### Geolocation Map
+- Visualizes the location of a selected animal using latitude and longitude.
+- Centers on the selected animal with a tooltip (breed) and popup (name).
+
+### Breed Distribution Chart
+- A dynamic pie chart showing the breed breakdown of filtered animals.
+- Updates automatically with filter changes.
+
+---
+
+## Demo
+
+Watch a screencast of the dashboard in action:  
+[Video Link](https://1drv.ms/v/s!AjoOhhMeaijyg84ttsY6H1_iNBz9zg?e=6QSw4n)
+
+---
+
+## Technologies Used
+
+### Core Tools
+- **Python:** Powers data processing, database interaction, and dashboard logic due to its robust library ecosystem.
+- **MongoDB:** Stores animal data in a flexible, document-based structure.
+- **Dash Framework:** Drives the interactive web interface with Python-based front-end and back-end components.
+
+### Libraries
+- **PyMongo:** Facilitates MongoDB integration with Python.
+- **Dash Core Components:** Provides interactive UI elements (e.g., radio buttons, tables).
+- **Dash Leaflet:** Enables geolocation mapping.
+- **Dash Table & Plotly Express:** Renders dynamic tables and charts.
+- **Pandas:** Handles data manipulation and DataFrame operations.
+
+### Why MongoDB?
+- **Document-Oriented:** Adapts to varied animal data attributes.
+- **Scalability:** Supports large datasets for future growth.
+- **Python Integration:** Seamless querying via PyMongo.
+
+### Why Dash?
+- **No JavaScript Required:** Simplifies development with Python.
+- **Interactivity:** Offers responsive components for filters, charts, and maps.
+- **Visualization:** Integrates Plotly for dynamic graphics.
+
+---
+
+## Installation
+
+### Prerequisites
+- Python 3.9+
+- MongoDB installed and running
+- Git
 
 1. Clone the Repository: Clone the project repository to your local machine.
    
